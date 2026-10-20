@@ -1,17 +1,15 @@
-import { getWalkers } from "./database.js"
+import { getCities } from "./database.js";
 
-const walkers = getWalkers()
-
+const cities = getCities();
 
 export const CityList = () => {
-    let citiesHTML = "<ul>"
+  let citiesHTML = "<ul>";
 
-    for (const currentWalker of walkers) {
-        citiesHTML += `<li>${currentWalker.city}</li>`
-    }
+  for (const currentCity of cities) {
+    citiesHTML += `<li>${currentCity.name}</li>`;
+  }
 
-    citiesHTML += "</ul>"
+  citiesHTML += "</ul>";
 
-    return citiesHTML
-}
-
+  return citiesHTML;
+};
